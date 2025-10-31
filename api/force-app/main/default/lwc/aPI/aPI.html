@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="API-Demo">
+        <div class="slds-p-around_medium">
+            
+            <lightning-button 
+                label="Fetch Users" 
+                onclick={handleFetch}>
+            </lightning-button>
+
+            <ul class="slds-m-top_medium">
+                <template for:each={users} for:item="user">
+                    <li key={user}>{user}</li>
+                </template>
+            </ul>
+
+        </div>
+    </lightning-card>
+</template>
